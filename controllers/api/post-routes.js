@@ -18,7 +18,16 @@ router.get('/:id', (req,res) => {
     Post.findOne({
         where: {
             id: req.params.id
-        }
+        },
+        include: [
+            {
+                model: Comment,
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            }
+        ]
     })
     .then(dbPostData => {
         if (!dbPostData) {
