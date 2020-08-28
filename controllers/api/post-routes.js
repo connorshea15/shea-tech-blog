@@ -47,6 +47,32 @@ router.post('/', (req, res) => {
     });
 });
 
+// route to update a post
+router.put('/:id', (req, res) => {
+    Post.update(
+        {
+            title: req.body.title,
+            post_contents: req.body.post_contents
+        },
+        {
+            where: {
+                id: req.params.id
+            }
+        }
+    )
+    .then(dbPostData => {
+        if (!dbPostData) {
+            res.status(404).json({ message: 'There is no post with that id!' });
+            return;
+        }
+        res.json(dbPostData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 
 
 module.exports = router;
