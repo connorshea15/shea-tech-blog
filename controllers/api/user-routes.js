@@ -20,7 +20,7 @@ router.get('/:id', (req, res) => {
         include: [
             {
                 model: Post,
-                attributes: ['id', 'title', 'post_content', 'created_at']
+                attributes: ['id', 'title', 'post_contents', 'created_at']
             }
         ]
     })
@@ -50,9 +50,5 @@ router.post('/', (req, res) => {
         res.status(500).json(err);
     });
 });
-
-
-
-
 
 module.exports = router;
