@@ -1,0 +1,29 @@
+{{> post-list post }}
+
+<h4>
+    Comments:
+</h4>
+<div class="comments">
+    {{#each post.comments}}
+    <div class="card m-2" style="width: 30rem;">
+    <div class="card-body">
+        <h5 class="card-title">
+            {{user.username}} on {{created_at}}
+        </h5>
+        <p class="card-text">
+            {{comment_text}}
+        </p>
+    </div>
+    </div>
+    {{/each}}
+</div>
+
+<form class="m-2" id="comment-form">
+  <div class="form-group">
+    <label for="comment-area"><h5>Add Comment</h5></label>
+    <textarea name="comment-area" class="form-control" id="comment-area" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit Comment</button>
+</form>
+
+<script src="/javascript/comment.js"></script>
