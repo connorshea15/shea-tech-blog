@@ -18,6 +18,7 @@
     {{/each}}
 </div>
 
+{{#if loggedIn}}
 <form class="m-2" id="comment-form">
   <div class="form-group">
     <label for="comment-area"><h5>Add Comment</h5></label>
@@ -25,5 +26,6 @@
   </div>
   <button type="submit" class="btn btn-primary">Submit Comment</button>
 </form>
+{{/if}}
 
 <script src="/javascript/comment.js"></script>
