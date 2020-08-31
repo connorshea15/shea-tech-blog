@@ -23,8 +23,7 @@ This project provides a CMS-style blog site, where developers can share blog pos
 https://github.com/connorshea15/shea-tech-blog
 
 ## Heroku Application
-
-
+https://shea-tech-blog.herokuapp.com/
 
 ## Installation
 
