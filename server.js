@@ -17,6 +17,7 @@ const sess = {
     })
 };
 
+// initialize the app to use express
 const app = express();
 const PORT = process.env.PORT || 3005;
 
