@@ -5,7 +5,7 @@
 This project provides a CMS-style blog site, where developers can share blog posts regarding exciting things happening in the web development industry. It allows for a secure log in, posting, and commenting. 
 
 ## Mockup
-![](/Public/images/mockup.png)
+![](/Public/images/mockup.PNG)
 
 ## Built With
 * Javascript
